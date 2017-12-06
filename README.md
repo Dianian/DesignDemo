@@ -1,4 +1,5 @@
 # DesignDemo
+[TOC]
 
 `ToolBar`
 
@@ -79,6 +80,7 @@ Google提供的滑动菜单页面
 `Snackbar`
 
 一个与 Toast 相似的控件，增加了一个 Undo 按钮
+###### Snackbar 的使用
 >Activity 代码
 >创建与 Toast 相似 传入三个参数 `view`、`显示的文字`、`显示的时长`。
 >`setAction()` 创建监听事件 传入两个参数，`按钮的文字`、`监听事件接口`
