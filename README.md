@@ -1,5 +1,4 @@
 # DesignDemo
-[TOC]
 
 `ToolBar`
 
@@ -98,5 +97,40 @@ Snackbar
 
 ---
 `CoordinatorLayout`
-类似于 FrameLayout
 
+类似于 FrameLayout，可实现MD效果，可监听其布局内部的子控件，做出合理的相应。比如：Snackbar弹出遮挡FloatButton，可让Button自动向上移动。
+
+##### CoordinatorLayout 的使用
+
+* 布局文件内替换Toolbar、FloatButton 外层FrameLayout即可
+
+`CardView`
+##### CardView 的使用
+用于实现卡片式布局，和FrameLayout类似，可以设置属性 `app:elevation`（高度）和`app:cardCornerRadius`（圆角弧度）
+
+`AppBarLayout`
+
+一个垂直方向的 LinearLayout ，封装了滚动事件， 用于实现 MD 的设计，可解决`ToolBar` 在 `CoordinatorLayout` 中被其他控件遮挡的问题 
+
+##### AppBarLayout 的使用
+* 布局文件
+1. 把 `ToolBar` 嵌套到 `AppBarLayout` 中。
+2. 在 `ToolBar` 下方控件中指定 布局行为 `app:layout_behavior="@string/appbar_scrolling_view_behavior"` 
+3. 在 `ToolBar` 中指定属性 `app:layout_scrollFlags="scroll|enterAlways|snap"`
+
+* 向上滚动 ToolBar 消失，向下滚动 ToolBar 出现
+
+`SwipeRefreshLayout`
+
+v4包提供的下拉刷新控件
+
+##### SwipeRefreshLayout 的使用
+
+>布局文件
+>> `RecyclerView` 外层嵌套 `SwipeRefreshLayout` 
+
+>Activity 代码
+>> `setColorSchemeResources()` 设置下拉刷新颜色
+>> `setOnRefreshListener()` 监听下拉的动作
+
+* 数据加载完毕 记得调用 适配器的 `notifyDataSetChanged()` 方法 和 `SwipeRefreshLayout`  的 `setRefreshing()` 的方法 设置属性为 false 关闭下拉刷新
