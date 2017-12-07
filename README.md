@@ -114,7 +114,6 @@ Snackbar
 
 一个垂直方向的 LinearLayout ，封装了滚动事件， 用于实现 MD 的设计，可解决`ToolBar` 在 `CoordinatorLayout` 中被其他控件遮挡的问题 
 
----
 ##### AppBarLayout 的使用
 * 布局文件
 1. 把 `ToolBar` 嵌套到 `AppBarLayout` 中。
