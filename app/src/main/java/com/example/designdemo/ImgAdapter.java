@@ -37,7 +37,6 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ViewHolder> {
         Img img = mImgs.get(position);
         holder.mName.setText(img.getName());
         holder.mImg.setImageResource(img.getImgId());
-
     }
 
     @Override
