@@ -30,7 +30,6 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ViewHolder> {
         }
         View view = LayoutInflater.from(mContext).inflate(R.layout.adapter_item, parent, false);
         return new ViewHolder(view);
-
     }
 
     @Override
