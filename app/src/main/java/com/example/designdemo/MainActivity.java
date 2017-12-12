@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mNav = findViewById(R.id.nav);
+
         mNav.setCheckedItem(R.id.l1);//设置默认选中项
         //Nav 界面的监听
         mNav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
