@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-//                    000
                     case R.id.l2:
                         Toast.makeText(MainActivity.this, "l2", Toast.LENGTH_SHORT).show();
                         break;
